@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Aula Vanguardia" />
+  <title>Soluciones - Aula Vanguardia</title>
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="../static/css/style.css" />
+
+  <!-- CSS de Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Video de Fondo -->
+  <video autoplay loop muted playsinline class="video-fondo">
+    <source src="../static/videos/Fondo(1).mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <!-- Navbar -->
+  <nav class="navbar px-4">
+    <a href="../index.html" style="display: flex; align-items: center; text-decoration: none; gap: 15px;">
+      <div class="logo">
+        <img src="../static/images/Gemini_Generated_Image_xp5fd9xp5fd9xp5f.png" alt="Aula Vanguardia Logo" class="logito" />
+      </div>
+      <h1 style="color: azure; font-size: 50px; margin: 0;">Aula Vanguardia</h1>
+    </a>
+
+    <!-- Menú Desplegable con Bootstrap -->
+    <div class="dropdown" id="miDropdownContainer">
+      <button class="btn dropdown-toggle rounded-pill px-4 py-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Seleccionar Opción
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+        <li><a href="../index.html" onclick="inicio()" class="dropdown-item">Inicio</a></li>
+        <li><a href="problema_es.html" onclick="Problematica()" class="dropdown-item">Problematica</a></li>
+        <li><a href="roles_es.html" onclick="roles()" class="dropdown-item">Roles</a></li>
+        <li><a href="video.html" onclick="video()" class="dropdown-item">Video</a></li>
+        <li><a href="imagen.html" onclick="video()" class="dropdown-item">Imagenes</a></li>
+        <li><a href="soluciones_en.html" onclick="cambioIngles()" class="dropdown-item">Inglés</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="container">
+    <h2 style="color: white;">Propuestas de Seguridad Escolar: Soluciones</h2>
+    
+    <section>
+      <div class="contenedor_tarjetas">
+        <div class="box">
+          <h3>1. Control de acceso:</h3>
+          <p>Instalación de detectores de metales en la entrada para evitar el ingreso de armas.</p>
+        </div>
+        <div class="box">
+          <h3>2. App de comunicación y rastreo:</h3>
+          <p>Permite a los apoderados monitorear la ubicación de los alumnos, la asistencia al colegio y recibir reportes de peleas.</p>
+        </div>
+        <div class="box">
+          <h3>3. Mapeo de riesgo:</h3>
+          <p>Incluye una sección en la app con un mapa de zonas rojas donde ocurren más conflictos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor_tarjetas">
+        <div class="box">
+          <h3>4. Detección automática:</h3>
+          <p>Notificación instantánea a docentes e inspectores cuando las cámaras detecten violencia.</p>
+        </div>
+        <div class="box">
+          <h3>5. Botones de pánico biométricos:</h3>
+          <p>Alertas rápidas activadas por huella digital para registrar el horario y quién reporta la pelea.</p>
+        </div>
+        <div class="box">
+          <h3>6. Resguardo en botones:</h3>
+          <p>Cámaras dedicadas sobre los botones de pánico para verificar la autenticidad del reporte.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS de Bootstrap 5.3 (Indispensable para desplegar las opciones al hacer clic) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tu JS Personalizado -->
+  <script src="../static/js/script.js"></script>
+</body>
+
+</html>

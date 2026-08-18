@@ -1,0 +1,369 @@
+/* ===================================================
+   1. RESET Y ESTILOS GLOBALES
+   =================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* VIDEO DE FONDO */
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ===================================================
+   2. NAVBAR Y LOGO
+   =================================================== */
+.navbar {
+    position: relative;
+    background-color: rgba(23, 123, 204, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 90px;
+    border-bottom: 3px solid #B69D54;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logito {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #B69D54;
+    box-shadow: 0 0 10px rgba(182, 157, 84, 0.6);
+    transition: transform 0.4s ease;
+}
+
+.logito:hover {
+    transform: rotate(360deg) scale(1.05);
+}
+
+.navbar h1 {
+    color: azure;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+/* DROPDOWN BOOTSTRAP */
+.dropdown-menu {
+    background-color: #0d1b2a !important;
+    border: 1px solid #B69D54 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 12px !important;
+    padding: 8px 0 !important;
+}
+
+.dropdown-item {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    padding: 10px 20px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #B69D54 !important;
+    color: #000000 !important;
+}
+
+#dropdownMenuButton {
+    background: linear-gradient(135deg, #B69D54 0%, #967f3f 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 25px !important;
+    padding: 10px 24px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* ===================================================
+   3. CÍRCULO INTERACTIVO DE MIEMBROS DE EQUIPO
+   =================================================== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+    padding: 40px 20px;
+    position: relative;
+}
+
+.team-circle {
+    position: relative;
+    width: 520px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Tarjeta individual */
+.member-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.3s ease;
+    width: 150px;
+    z-index: 2;
+}
+
+.member-card:hover {
+    filter: brightness(1.25);
+}
+
+/* Contenedor del círculo con animación de deslizado */
+.photo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #0b1326;
+    border: 3px solid #e1b85e;
+    box-shadow: 0 0 15px rgba(225, 184, 94, 0.4);
+    margin-bottom: 6px;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Efecto Hover: se desliza hacia arriba y cambia a CIAN (#00FFFF) */
+.member-card:hover .photo-container {
+    transform: translateY(-6px) scale(1.1);
+    border-color: #00FFFF;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9), 
+                0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    pointer-events: none;
+}
+
+.member-info .name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+
+.member-info .role {
+    color: #d1d5db;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    line-height: 1.1;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Botón giratorio central */
+.rotate-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    z-index: 5;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rotate-btn:hover {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
+    border-color: #00FFFF;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+}
+
+.rotate-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: #177bcc;
+    transition: stroke 0.3s ease;
+}
+
+.rotate-btn:hover svg {
+    stroke: #00FFFF;
+}
+
+/* Botón inferior */
+.action-btn {
+    margin-top: 30px;
+    padding: 12px 36px;
+    background: linear-gradient(135deg, #B69D54 0%, #967f3f 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(182, 157, 84, 0.6);
+}
+
+/* ===================================================
+   4. VENTANA EMERGENTE (MODAL CON FONDO SÓLIDO Y BORDE)
+   =================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Permite pasar el cursor libremente por los círculos */
+    pointer-events: none; 
+}
+
+.modal-content {
+    /* Fondo oscuro sólido idéntico a tu segunda imagen */
+    background-color: #0d192b !important; 
+    border: 2px solid #e1b85e !important; /* Borde dorado metálico */
+    border-radius: 18px !important;       /* Esquinas redondeadas */
+    padding: 30px 25px !important;
+    max-width: 440px;
+    width: 85%;
+    text-align: center;
+    position: relative;
+    /* Sombra profunda para destacar sobre el fondo */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95);
+    animation: popupAnimation 0.2s ease-out forwards;
+}
+
+@keyframes popupAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Título (Nombre) */
+.modal-content h2 {
+    color: #f5d67b !important;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+/* Subtítulo (Rol/Puesto) */
+.modal-content h3 {
+    color: #2b82d9 !important;
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Descripción de texto */
+.modal-content p {
+    color: #e2e8f0 !important;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===================================================
+   5. RESPONSIVE DESIGN (PANTALLAS PEQUEÑAS)
+   =================================================== */
+@media (max-width: 768px) {
+    .team-circle {
+        width: 380px;
+        height: 380px;
+    }
+
+    .photo-container {
+        width: 75px;
+        height: 75px;
+    }
+
+    .member-card {
+        width: 120px;
+    }
+
+    .member-info .name {
+        font-size: 0.85rem;
+    }
+
+    .member-info .role {
+        font-size: 0.75rem;
+    }
+}
