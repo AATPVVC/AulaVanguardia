@@ -214,7 +214,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 310px;
+    width: 390px;
     max-width: 100%;
     min-height: 190px;
     background: linear-gradient(145deg, #177bcc 0%, #105996 100%);
@@ -240,6 +240,7 @@ body {
     font-size: 1.2rem;
     color: #fceea7;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    
 }
 
 .box p,
@@ -365,10 +366,21 @@ body {
 #dropdownMenuButton::after {
   border-top-color: #ffffff !important;
 }
+/* Contenedor Principal */
+.contenedor-videoImagen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* CLAVE: Permite que las tarjetas bajen en móviles */
+    gap: 25px; 
+    justify-content: center; 
+    padding: 20px 15px; /* Agregado un poco de padding lateral para móviles */
+}
+
+/* Tarjetas */
 .video-imagen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Alinea el contenido uniformemente si los textos tienen distinto largo */
     align-items: center;
     text-align: center;
     background: linear-gradient(135deg, #c3aa5d 0%, #9e853a 100%);
@@ -377,15 +389,34 @@ body {
     padding: 30px 25px;
     width: 100%;
     max-width: 400px;
+    box-sizing: border-box; /* Evita que el padding rompa el tamaño total */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
 }
-.contenedor-videoImagen {
-    display: flex;
-    flex-direction: row;
-    gap: 25px; 
-    justify-content: center; 
-    padding: 20px 0px;
+
+/* Tipografía adaptada (Reemplaza tus estilos en línea) */
+.video-imagen h2 {
+    font-size: 1.3rem; /* Tamaño relativo que se adapta mejor */
+    margin-bottom: 15px;
+    margin-top: 0;
+    line-height: 1.3;
+}
+
+.video-imagen p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    flex-grow: 1; /* Empuja la imagen siempre hacia el fondo de la tarjeta */
+}
+
+/* Imágenes 100% Responsivas */
+.video-imagen img {
+    width: 100%; /* Ocupará el máximo de la tarjeta sin salirse */
+    max-width: 350px;
+    height: auto; /* Mantiene la proporción original */
+    aspect-ratio: 7 / 6; /* Fuerza la proporción que tenías de 350x300 */
+    object-fit: cover; /* Evita que las imágenes se deformen (estiren o achaten) */
+    border-radius: 8px; /* Un toque estético para que combinen con la tarjeta */
 }
