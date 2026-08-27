@@ -38,7 +38,7 @@ let teamMembers = [
   {
     name: "Gabriel Naranjo",
     role: " Co-desarrollador ",
-    desc: "Desarrollador secundario del sitio informtico",
+    desc: "Desarrollador secundario del sitio informatico",
     image: "../static/images/gabriel.png"
   },
   {
