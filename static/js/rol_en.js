@@ -27,31 +27,31 @@ let teamMembers = [
     name: "Cesar Arzola",
     role: "UI/UX Designer",
     desc: "Visual design of web interfaces and user experience optimization.",
-    image: "../static/images/Cesar.jpg"
+    image: "../static/images/cesar.jpg"
   },
   {
     name: "Angel Alvarez",
     role: "Frontend Developer",
     desc: "Development of interactive sites, responsive layout using HTML, CSS, and JS.",
-    image: "../static/images/Angel.jpg"
+    image: "../static/images/angel.jpg"
   },
   {
     name: "Gabriel Naranjo",
     role: "Backend Developer",
     desc: "Database administration and server logic for site features.",
-    image: "../static/images/Gabriel.png"
+    image: "../static/images/gabriel.png"
   },
   {
     name: "Angelo Pomasongo",
     role: "Project Manager",
     desc: "Leadership, delivery planning, and general coordination of the project team.",
-    image: "../static/images/Angelo.jpg"
+    image: "../static/images/angelo.jpg"
   },
   {
     name: "Diego Velazquez",
     role: "QA Specialist",
     desc: "Exhaustive software testing, bug reporting, and quality control.",
-    image: "../static/images/Diego.png"
+    image: "../static/images/diego.png"
   }
 ];
 
