@@ -25,32 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
 let teamMembers = [
   {
     name: "Cesar Arzola",
-    role: "UI/UX Designer",
-    desc: "Visual design of web interfaces and user experience optimization.",
+    role: "Project Leader",
+    desc: "He is responsible for managing and overseeing the project",
     image: "../static/images/cesar.jpg"
   },
   {
     name: "Angel Alvarez",
-    role: "Frontend Developer",
+    role: "Developer",
     desc: "Development of interactive sites, responsive layout using HTML, CSS, and JS.",
     image: "../static/images/angel.jpg"
   },
   {
     name: "Gabriel Naranjo",
-    role: "Backend Developer",
-    desc: "Database administration and server logic for site features.",
+    role: "Co-developer",
+    desc: "Junior Web Developer.",
     image: "../static/images/gabriel.png"
   },
   {
     name: "Angelo Pomasongo",
-    role: "Project Manager",
-    desc: "Leadership, delivery planning, and general coordination of the project team.",
+    role: "Co-developer",
+    desc: "Junior Web Application Developer.",
     image: "../static/images/angelo.jpg"
   },
   {
     name: "Diego Velazquez",
-    role: "QA Specialist",
-    desc: "Exhaustive software testing, bug reporting, and quality control.",
+    role: "Designer",
+     desc: "Creator of the website design and informational site.",
     image: "../static/images/diego.png"
   }
 ];
@@ -166,4 +166,8 @@ window.addEventListener("resize", renderCards);
 // NAVEGACIÓN
 function cambioIngles() {
   window.location.href = 'roles_en.html';
+}
+
+function cambioEspanol() {
+  alert("Cambiando el idioma a Spanish...");
 }

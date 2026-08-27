@@ -26,31 +26,31 @@ let teamMembers = [
   {
     name: "Cesar Arzola",
     role: "Lider de proyecto",
-    desc: "Diseño visual de interfaces web y optimización de la experiencia de usuario.",
+    desc: "Es el encargado de gestionar y controlar el proyecto ",
     image: "../static/images/cesar.jpg"
   },
   {
     name: "Angel Alvarez",
-    role: "Desarrollador Frontend",
-    desc: "Desarrollo de sitios interactivos, maquetación adaptable usando HTML, CSS y JS.",
+    role: "Desarrollador ",
+    desc: "Desarrollador principal del sitio informativo usando HTML, CSS y JS.",
     image: "../static/images/angel.jpg"
   },
   {
     name: "Gabriel Naranjo",
     role: " Co-desarrollador ",
-    desc: "Administración de bases de datos y lógica del servidor para las funciones del sitio.",
+    desc: "Desarrollador secundario del sitio informtico",
     image: "../static/images/gabriel.png"
   },
   {
     name: "Angelo Pomasongo",
     role: "Co-desarrollador",
-    desc: "Liderazgo, planificación de entregas y coordinación general del equipo del proyecto.",
+    desc: "Desarrollador secundario de la aplicación-web",
     image: "../static/images/angelo.jpg"
   },
   {
     name: "Diego Velazquez",
     role: "Diseñador",
-    desc: "Pruebas exhaustivas de software, reporte de errores y control de calidad.",
+    desc: "Creador de la estica de pagina-web y sitio informativo",
     image: "../static/images/diego.png"
   }
 ];
@@ -166,4 +166,7 @@ window.addEventListener("resize", renderCards);
 // NAVEGACIÓN
 function cambioIngles() {
   window.location.href = 'roles_en.html';
+}
+function cambioIngles() {
+  alert("Cambiando el idioma a Inglés...");
 }
